@@ -1,0 +1,5 @@
+add_library(add STATIC add.cpp)
+add_executable(addapp  add_app.cpp)
+target_link_libraries(addapp add)
+add_executable(testor  test.cpp)
+target_link_libraries(testor add gtest pthread)
